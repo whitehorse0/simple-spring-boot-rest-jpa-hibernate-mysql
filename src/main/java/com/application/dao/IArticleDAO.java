@@ -5,10 +5,19 @@
  */
 package com.application.dao;
 
+import com.application.entity.Article;
+import java.util.List;
+
 /**
  *
- * @author Flipbox
+ * @author WhiteHorse <eka378putra@gmail.com>
  */
 public interface IArticleDAO {
+    List<Article> getAllArticle();
+    Article getArticleById(int articleId);
+    void addArticle(Article article);
+    void updateArticle(Article article);
+    void deleteArticle(int articleId);
+    boolean articleExists(String title, String category);
     
 }
